@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05070a">
+  <title>Praxus Gaming JVS Loading Screen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="wallpaper-fix.css?v=4">
+</head>
+<body>
+  <main class="loading-screen">
+    <audio id="music" src="./assets/loading-song.ogg" autoplay preload="auto"></audio>
+    <div class="cinematic-shade" aria-hidden="true"></div>
+    <img class="wallpaper-logo" src="./assets/praxus-logo-v4.png?v=4" alt="Praxus Gaming">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="top-actions">
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Mute music"><span aria-hidden="true">◖))</span><b>MUSIC ON</b></button>
+        <div class="connection-state"><span class="pulse-dot" aria-hidden="true"></span><span>SECURE LINK ACTIVE</span></div>
+      </div>
+    </header>
+
+    <section class="hero-copy" aria-labelledby="screen-title">
+      <p class="chapter">THE FORCE DIVIDES THE GALAXY</p>
+      <h1 id="screen-title"><span>JEDI</span><b>VS</b><span>SITH</span></h1>
+      <div class="hero-rule" aria-hidden="true"><i></i><em></em><i></i></div>
+      <p class="subtitle">CHOOSE YOUR PATH. SHAPE THE WAR.</p>
+    </section>
+
+    <section class="load-panel" aria-live="polite">
+      <div class="panel-edge panel-edge-left" aria-hidden="true"></div><div class="panel-edge panel-edge-right" aria-hidden="true"></div>
+      <div class="server-data">
+        <div><span>DESTINATION</span><strong id="map-name">JEDI VS SITH</strong></div>
+        <div><span>PROTOCOL</span><strong id="game-mode">STAR WARS ROLEPLAY</strong></div>
+        <div class="identity"><span>IDENTITY</span><strong id="steam-id">CONNECTING</strong></div>
+      </div>
+      <div class="progress-heading">
+        <div class="status-wrap"><span class="spinner" aria-hidden="true"></span><div><span>CONNECTION STATUS</span><strong id="status">Establishing secure connection…</strong></div></div>
+        <div class="percentage"><strong id="percentage">0</strong><span>%</span></div>
+      </div>
+      <div class="progress-track" id="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progress-fill"><span></span></div></div>
+      <div class="download-row"><span class="download-file" id="download-file">Waiting for server content…</span><span class="file-count" id="file-count">SYNC PENDING</span></div>
+      <div class="tip-row"><span>FIELD INTEL</span><p id="tip">Respect roleplay boundaries and give other players room to build their stories.</p></div>
+    </section>
+
+    <footer><span>PRAXUS GAMING • JEDI VS SITH</span><span class="footer-center">LOADING DEPLOYMENT ENVIRONMENT</span><span>EST. 2026</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.loading-screen {
+  background-color: #05070a;
+  background-image: none;
+}
+
+.loading-screen::before {
+  content: "";
+  position: absolute;
+  inset: -3%;
+  z-index: -6;
+  background: #05070a url("./assets/darth-revan-live-wallpaper.gif?v=4") center / cover no-repeat;
+  animation: wallpaper-drift 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes wallpaper-drift {
+  from {
+    transform: scale(1.02) translate3d(-0.5%, -0.25%, 0);
+  }
+  to {
+    transform: scale(1.08) translate3d(0.75%, 0.5%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen::before {
+    animation: none;
+    transform: scale(1.04);
+  }
+}
+
+.loading-screen {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topbar {
+  justify-content: flex-end;
+}
+
+.wallpaper-logo {
+  position: absolute;
+  top: 47%;
+  left: clamp(26px, 4vw, 82px);
+  z-index: -2;
+  width: clamp(180px, 19vw, 340px);
+  height: auto;
+  transform: translateY(-50%);
+  opacity: 0.86;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 24px rgba(255, 38, 38, 0.42));
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 760px) {
+  .wallpaper-logo {
+    top: 14%;
+    left: 20px;
+    width: 112px;
+    transform: none;
+    opacity: 0.88;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 761px) {
+  .wallpaper-logo {
+    top: 43%;
+    width: clamp(150px, 16vw, 230px);
+  }
+}
