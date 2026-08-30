@@ -1,0 +1,39 @@
+.loading-screen {
+  background: #05070a url("./assets/revan-bg.jpg?v=2") center / cover no-repeat;
+}
+
+.background-video {
+  background: #05070a url("./assets/revan-bg.jpg?v=2") center / cover no-repeat;
+}
+
+.wallpaper-logo {
+  position: absolute;
+  top: 47%;
+  left: clamp(26px, 4vw, 82px);
+  z-index: -2;
+  width: clamp(180px, 19vw, 340px);
+  height: auto;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 24px rgba(255, 38, 38, 0.42));
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 760px) {
+  .wallpaper-logo {
+    top: 17%;
+    left: 20px;
+    width: 112px;
+    transform: none;
+    opacity: 0.88;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 761px) {
+  .wallpaper-logo {
+    top: 43%;
+    width: clamp(150px, 16vw, 230px);
+  }
+}
